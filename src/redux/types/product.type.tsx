@@ -1,8 +1,7 @@
 export interface ProductInterface {
-    id: String,
     name: String,
     description: String,
-    price: number,
+    price: number | undefined,
 }
 
 export const ADD_PRODUCT = "ADD_PRODUCT"

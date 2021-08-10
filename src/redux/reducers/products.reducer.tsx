@@ -1,21 +1,11 @@
 import {ADD_PRODUCT, ProductActionTypes, ProductInterface} from '../types';
 
+const initialState: ProductInterface[] = []
 
-interface ProductsState {
-    products: ProductInterface[]
-}
-
-const initialState: ProductsState = {
-    products: []
-};
-
-export function productsReducer(state: ProductsState = initialState, action: ProductActionTypes): ProductsState {
+export function productsReducer(state: ProductInterface[] = initialState, action: ProductActionTypes): ProductInterface[] {
     switch (action.type) {
         case ADD_PRODUCT: {
-            return {
-                ...state,
-                products: [...state.products, action.payload]
-            };
+            return [...state, action.payload]
         }
         default:
             return state;

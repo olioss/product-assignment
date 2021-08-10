@@ -1,4 +1,4 @@
-import { ActionCreator } from 'redux';
+import {ActionCreator} from 'redux';
 import {ADD_PRODUCT, ProductActionTypes, ProductInterface} from "../types";
 
 type DispatchType = (args: ProductActionTypes) => ProductActionTypes;
